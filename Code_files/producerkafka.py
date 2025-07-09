@@ -13,7 +13,7 @@ context.check_hostname = False
 context.verify_mode = ssl.CERT_NONE
 
 # Initialize YouTube API with your API key
-API_KEY = 'AIzaSyCqVRuLat-oq0bNHOwLhYLaS7IEhJBvWRo'
+API_KEY = '##########'
 youtube = build("youtube", "v3", developerKey=API_KEY)
 
 # Initialize Kafka Producer with your credentials
@@ -21,8 +21,8 @@ youTube_producer = KafkaProducer(
     bootstrap_servers='pkc-619z3.us-east1.gcp.confluent.cloud:9092',
     security_protocol="SASL_SSL",
     sasl_mechanism="PLAIN",
-    sasl_plain_username='BAZC7FBHAGKF5X7B',
-    sasl_plain_password='1ioTdlSWqdw6Q9jjnUjF/KqXK84kCMIBAXaCiM5ukv6VRJI1w9UIuZAruND/B6Cq',
+    sasl_plain_username='#########',
+    sasl_plain_password='#########',
     ssl_context=context,
     value_serializer=lambda v: json.dumps(v).encode('utf-8')
 )
