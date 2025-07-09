@@ -18,7 +18,7 @@ from sklearn.linear_model import LogisticRegression as SklearnLogisticRegression
 import certifi
 
 # MongoDB Connection
-client = MongoClient("mongodb+srv://soumya:soumya@clustersoumya.c7lzckp.mongodb.net/?retryWrites=true&w=majority", tlsCAFile=certifi.where())  # Replace with your MongoDB URI
+client = MongoClient("#####")  # Replace with your MongoDB URI
 db = client["youtube_analysis"]  # Replace with your database name
 collection = db["analysis_results"]
 
@@ -37,8 +37,8 @@ youTube_consumer = KafkaConsumer(
     bootstrap_servers='pkc-619z3.us-east1.gcp.confluent.cloud:9092',
     security_protocol="SASL_SSL",
     sasl_mechanism="PLAIN",
-    sasl_plain_username='BAZC7FBHAGKF5X7B',
-    sasl_plain_password='1ioTdlSWqdw6Q9jjnUjF/KqXK84kCMIBAXaCiM5ukv6VRJI1w9UIuZAruND/B6Cq',
+    sasl_plain_username='#########',
+    sasl_plain_password='#########',
     ssl_context=ssl_context,
     value_deserializer=lambda x: json.loads(x.decode('utf-8'))
 )
